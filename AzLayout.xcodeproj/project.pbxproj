@@ -13,6 +13,13 @@
 		27ABAD122B80F0C2008654CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27ABAD102B80F0C2008654CF /* Main.storyboard */; };
 		27ABAD142B80F0C3008654CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27ABAD132B80F0C3008654CF /* Assets.xcassets */; };
 		27ABAD172B80F0C3008654CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27ABAD152B80F0C3008654CF /* LaunchScreen.storyboard */; };
+		DC124AE82B8330FC00279E36 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DC124AE72B8330FC00279E36 /* Lottie */; };
+		DC124AEA2B833C8500279E36 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC124AE92B833C8500279E36 /* UIColor+Extension.swift */; };
+		DCA2AAA32B84968B00AF50E4 /* PortakaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAA22B84968B00AF50E4 /* PortakaTableViewCell.swift */; };
+		DCA2AAA52B8498AB00AF50E4 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAA42B8498AB00AF50E4 /* SecondCell.swift */; };
+		DCA2AAAA2B849BC100AF50E4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAA82B849BC100AF50E4 /* CustomCell.swift */; };
+		DCA2AAAB2B849BC100AF50E4 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA2AAA92B849BC100AF50E4 /* CustomCell.xib */; };
+		DCA2AAAD2B84A4BA00AF50E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAAC2B84A4BA00AF50E4 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,12 @@
 		27ABAD132B80F0C3008654CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27ABAD162B80F0C3008654CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27ABAD182B80F0C3008654CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC124AE92B833C8500279E36 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DCA2AAA22B84968B00AF50E4 /* PortakaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortakaTableViewCell.swift; sourceTree = "<group>"; };
+		DCA2AAA42B8498AB00AF50E4 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
+		DCA2AAA82B849BC100AF50E4 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		DCA2AAA92B849BC100AF50E4 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		DCA2AAAC2B84A4BA00AF50E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC124AE82B8330FC00279E36 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +73,13 @@
 				27ABAD0A2B80F0C2008654CF /* AppDelegate.swift */,
 				27ABAD0C2B80F0C2008654CF /* SceneDelegate.swift */,
 				27ABAD0E2B80F0C2008654CF /* ViewController.swift */,
+				DCA2AAAC2B84A4BA00AF50E4 /* MainViewModel.swift */,
+				DC124AE92B833C8500279E36 /* UIColor+Extension.swift */,
+				DCA2AAA22B84968B00AF50E4 /* PortakaTableViewCell.swift */,
+				DCA2AAA42B8498AB00AF50E4 /* SecondCell.swift */,
 				27ABAD102B80F0C2008654CF /* Main.storyboard */,
+				DCA2AAA82B849BC100AF50E4 /* CustomCell.swift */,
+				DCA2AAA92B849BC100AF50E4 /* CustomCell.xib */,
 				27ABAD132B80F0C3008654CF /* Assets.xcassets */,
 				27ABAD152B80F0C3008654CF /* LaunchScreen.storyboard */,
 				27ABAD182B80F0C3008654CF /* Info.plist */,
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = AzLayout;
+			packageProductDependencies = (
+				DC124AE72B8330FC00279E36 /* Lottie */,
+			);
 			productName = AzLayout;
 			productReference = 27ABAD072B80F0C2008654CF /* AzLayout.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 27ABACFE2B80F0C2008654CF;
+			packageReferences = (
+				DC124AE62B8330FC00279E36 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 27ABAD082B80F0C2008654CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +153,7 @@
 			files = (
 				27ABAD172B80F0C3008654CF /* LaunchScreen.storyboard in Resources */,
 				27ABAD142B80F0C3008654CF /* Assets.xcassets in Resources */,
+				DCA2AAAB2B849BC100AF50E4 /* CustomCell.xib in Resources */,
 				27ABAD122B80F0C2008654CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				27ABAD0F2B80F0C2008654CF /* ViewController.swift in Sources */,
+				DCA2AAA52B8498AB00AF50E4 /* SecondCell.swift in Sources */,
 				27ABAD0B2B80F0C2008654CF /* AppDelegate.swift in Sources */,
 				27ABAD0D2B80F0C2008654CF /* SceneDelegate.swift in Sources */,
+				DCA2AAA32B84968B00AF50E4 /* PortakaTableViewCell.swift in Sources */,
+				DCA2AAAA2B849BC100AF50E4 /* CustomCell.swift in Sources */,
+				DC124AEA2B833C8500279E36 /* UIColor+Extension.swift in Sources */,
+				DCA2AAAD2B84A4BA00AF50E4 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC124AE62B8330FC00279E36 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC124AE72B8330FC00279E36 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC124AE62B8330FC00279E36 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27ABACFF2B80F0C2008654CF /* Project object */;
 }
