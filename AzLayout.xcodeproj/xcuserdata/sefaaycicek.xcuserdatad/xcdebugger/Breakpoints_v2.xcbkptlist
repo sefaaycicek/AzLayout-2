@@ -3,4 +3,70 @@
    uuid = "3CA9B443-4E29-459F-9479-551565D965E0"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20D4D58F-44E9-4824-8A26-EF396BE6FD03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AzLayout/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "20D4D58F-44E9-4824-8A26-EF396BE6FD03 - 756e8371c66f2ea8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AzLayout.MainViewModel.init() -&gt; AzLayout.MainViewModel"
+                  moduleName = "AzLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sefaaycicek/Documents/AzLayout/AzLayout/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "20D4D58F-44E9-4824-8A26-EF396BE6FD03 - c4a75d3dd2aeb04f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in AzLayout.MainViewModel.init() -&gt; AzLayout.MainViewModel"
+                  moduleName = "AzLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sefaaycicek/Documents/AzLayout/AzLayout/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B45CE93-C7BF-4A8B-A325-83E9633379B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AzLayout/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "addNewButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

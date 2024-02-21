@@ -20,6 +20,7 @@
 		DCA2AAAA2B849BC100AF50E4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAA82B849BC100AF50E4 /* CustomCell.swift */; };
 		DCA2AAAB2B849BC100AF50E4 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA2AAA92B849BC100AF50E4 /* CustomCell.xib */; };
 		DCA2AAAD2B84A4BA00AF50E4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAAC2B84A4BA00AF50E4 /* MainViewModel.swift */; };
+		DCA2AAAF2B85F4A900AF50E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2AAAE2B85F4A900AF50E4 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DCA2AAA82B849BC100AF50E4 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		DCA2AAA92B849BC100AF50E4 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		DCA2AAAC2B84A4BA00AF50E4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DCA2AAAE2B85F4A900AF50E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				DC124AE92B833C8500279E36 /* UIColor+Extension.swift */,
 				DCA2AAA22B84968B00AF50E4 /* PortakaTableViewCell.swift */,
 				DCA2AAA42B8498AB00AF50E4 /* SecondCell.swift */,
+				DCA2AAAE2B85F4A900AF50E4 /* BaseViewController.swift */,
 				27ABAD102B80F0C2008654CF /* Main.storyboard */,
 				DCA2AAA82B849BC100AF50E4 /* CustomCell.swift */,
 				DCA2AAA92B849BC100AF50E4 /* CustomCell.xib */,
@@ -170,6 +173,7 @@
 				27ABAD0B2B80F0C2008654CF /* AppDelegate.swift in Sources */,
 				27ABAD0D2B80F0C2008654CF /* SceneDelegate.swift in Sources */,
 				DCA2AAA32B84968B00AF50E4 /* PortakaTableViewCell.swift in Sources */,
+				DCA2AAAF2B85F4A900AF50E4 /* BaseViewController.swift in Sources */,
 				DCA2AAAA2B849BC100AF50E4 /* CustomCell.swift in Sources */,
 				DC124AEA2B833C8500279E36 /* UIColor+Extension.swift in Sources */,
 				DCA2AAAD2B84A4BA00AF50E4 /* MainViewModel.swift in Sources */,

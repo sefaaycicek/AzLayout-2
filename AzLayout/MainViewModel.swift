@@ -18,12 +18,21 @@ class MainViewModel : BaseViewModel {
     private var viewModels = [CellViewModelProtocol]()
     
     override init() {
-        viewModels.append(AyvaViewModel(image: UIImage(named: "manzara2")))
+        viewModels.append(AyvaViewModel(image: UIImage(named: "manzara2"), onFavButtonTapped: { isSelected in
+            // isselected bilgisini viewController'a nasıl gönderirsiniz?
+        }))
+        
         viewModels.append(PortakalViewModel(name: "Ali", surname: "Veli", age: 20))
-        viewModels.append(AyvaViewModel(image: UIImage(named: "manzara")))
-        viewModels.append(AyvaViewModel(image: UIImage(named: "manzara2")))
-        viewModels.append(AyvaViewModel(image: UIImage(named: "manzara")))
      
+    }
+    
+    func addNewItem(item : CellViewModelProtocol) -> Int {
+        viewModels.append(item)
+        return viewModels.count - 1
+    }
+    
+    func deleteItem(index : Int) {
+        viewModels.remove(at: index)
     }
     
     var itemCount : Int {
@@ -62,8 +71,11 @@ class ElmaViewModel : BaseViewModel, CellViewModelProtocol {
 
 class AyvaViewModel : BaseViewModel, CellViewModelProtocol {
     let image : UIImage?
-    init(image: UIImage?) {
+    let onFavButtonTapped : (Bool)->()
+    
+    init(image: UIImage?, onFavButtonTapped: @escaping (Bool) -> Void) {
         self.image = image
+        self.onFavButtonTapped = onFavButtonTapped
     }
     
     func getCellIdentifier() -> String {

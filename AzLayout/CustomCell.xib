@@ -23,17 +23,28 @@
                             <constraint firstAttribute="width" constant="754" id="loO-4I-Ln1"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY9-lz-B2h">
+                        <rect key="frame" x="365" y="143" width="24" height="14"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                        <connections>
+                            <action selector="favButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VNe-N9-SdX"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="XYh-2l-zjM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3A3-Re-lCR"/>
                     <constraint firstAttribute="trailing" secondItem="XYh-2l-zjM" secondAttribute="trailing" id="NPR-pA-vl5"/>
                     <constraint firstItem="XYh-2l-zjM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OLk-YM-nNq"/>
+                    <constraint firstItem="sY9-lz-B2h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="X73-Mn-0Xf"/>
                     <constraint firstAttribute="bottom" secondItem="XYh-2l-zjM" secondAttribute="bottom" id="hRO-I2-st4"/>
+                    <constraint firstItem="sY9-lz-B2h" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sIY-XZ-qjm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="customImageView" destination="XYh-2l-zjM" id="45v-L3-rFq"/>
+                <outlet property="favButton" destination="sY9-lz-B2h" id="C8g-9W-Qfy"/>
                 <outlet property="imageHeightConstraint" destination="BH8-G9-hfS" id="t8A-Gu-tVP"/>
                 <outlet property="imageWidthConstraint" destination="loO-4I-Ln1" id="QC4-lT-llw"/>
             </connections>

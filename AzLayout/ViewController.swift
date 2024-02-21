@@ -9,7 +9,7 @@
 import UIKit
 import Lottie
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     @IBOutlet var tableView : UITableView!
     
@@ -20,8 +20,6 @@ class ViewController: UIViewController {
         
         let customCell = UINib(nibName: "CustomCell", bundle: nil)
         tableView.register(customCell, forCellReuseIdentifier: "ayva")
-        
-    
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +38,19 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
+    @IBAction func addNewButtonTapped(_ sender: Any) {
+        let index = self.viewModel.addNewItem(item: AyvaViewModel(image: UIImage(named: "manzara"), onFavButtonTapped: { isSelected in
+            
+        }))
+        let indexPath = IndexPath(row: index, section: 0)
+       
+        //tableView.reloadData()
+        
+        tableView.insertRows(at: [indexPath], with: .fade)
+        tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+    
+    
     deinit {
         // destroy olduktan sonra tetiklenir.
     }
@@ -47,7 +58,49 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let itemViewModel = self.viewModel.getViewModel(for: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (viewModel.itemCount - 1) {
+            // apiden yeni 20 data çekmek gerek
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Sil"
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.showAlert(title: "Silme Uyarısı",
+                           message: "Silmek istediğinizden emin misniz?") { alertController in
+               
+                alertController.addAction(UIAlertAction(title: "Sil", style: .default, handler: { action in
+                    
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+                        self.viewModel.deleteItem(index : indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .top)
+                        //tableView.reloadData()
+                    }
+                    
+                    /*DispatchQueue.global().async {
+                        // thread yapıulmasıg gereken işlemler burda yapulır.
+                        
+                        DispatchQueue.main.async {
+                            // Ana thread'e taşınması gereken işlemler burda yapılor.
+                            self.tableView.reloadData()
+                        }
+                    }*/
+                  
+                }))
+                
+                alertController.addAction(UIAlertAction(title: "Vazgeç", style: .cancel, handler: { action in
+                    
+                }))
+            }
+           
+        }
     }
 }
 
@@ -72,22 +125,11 @@ extension ViewController : UITableViewDataSource {
         return cell as! UITableViewCell
     }
     
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row % 2 == 0 {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "portakal") as? PortakaTableViewCell {
-                cell.fillCell(txt1: "\(indexPath.section)",
-                               txt2: "\(indexPath.row)",
-                               txt3: " Section \(indexPath.section) Row \(indexPath.row)")
-                return cell
-            }
-            
-        } else {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "elma") as? SecondCell {
-                cell.fillCell(txt1: "Section \(indexPath.section) Row \(indexPath.row)")
-                return cell
-            }
-        }
-       
-        return UITableViewCell()
-    }*/
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "KATEGORİ HEADER SECTION \(section)"
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "KATEGORİ FOOTER SECTION  \(section)"
+    }
 }

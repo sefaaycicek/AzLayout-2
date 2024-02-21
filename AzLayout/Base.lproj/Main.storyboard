@@ -16,12 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ckG-XQ-uM5">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ckG-XQ-uM5">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="768"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="portakal" rowHeight="89" id="mr0-n7-y9b" customClass="PortakaTableViewCell" customModule="AzLayout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="89"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mr0-n7-y9b" id="ff3-60-52g">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
@@ -66,7 +65,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="elma" id="kct-Vw-zVS" customClass="SecondCell" customModule="AzLayout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="144.33333206176758" width="393" height="41.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="139" width="393" height="41.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kct-Vw-zVS" id="mcv-zB-RIF">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
@@ -96,13 +95,23 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wwe-ej-EEU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nx-hR-S4p">
+                                <rect key="frame" x="149.66666666666666" y="793" width="94" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add New"/>
+                                <connections>
+                                    <action selector="addNewButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCQ-o0-i6a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ckG-XQ-uM5" secondAttribute="trailing" id="2Hh-LM-8ag"/>
                             <constraint firstItem="ckG-XQ-uM5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BeD-eQ-a5O"/>
-                            <constraint firstAttribute="bottom" secondItem="ckG-XQ-uM5" secondAttribute="bottom" id="epG-EZ-Reo"/>
+                            <constraint firstAttribute="bottom" secondItem="1Nx-hR-S4p" secondAttribute="bottom" constant="24" id="HIA-Rl-arV"/>
+                            <constraint firstItem="1Nx-hR-S4p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aws-2H-gJg"/>
+                            <constraint firstItem="1Nx-hR-S4p" firstAttribute="top" secondItem="ckG-XQ-uM5" secondAttribute="bottom" constant="25" id="dZG-a7-dIf"/>
                             <constraint firstItem="ckG-XQ-uM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jPW-Gl-tb8"/>
                         </constraints>
                     </view>

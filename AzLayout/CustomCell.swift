@@ -13,10 +13,16 @@ class CustomCell: UITableViewCell, TableViewCellProtocol {
     @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var customImageView: UIImageView!
     
+    @IBOutlet weak var favButton: UIButton!
+    
+    
     var cellViewModel : AyvaViewModel? = nil
     
     func fillData(viewModel: CellViewModelProtocol) {
         self.cellViewModel = viewModel as? AyvaViewModel
+        
+        favButton.setImage(UIImage(named: "fav_selected"), for: .selected)
+        favButton.setImage(UIImage(named: "fav_unselected"), for: .normal)
         
         if let image = self.cellViewModel?.image {
             let ratio = image.size.width / image.size.height
@@ -28,6 +34,15 @@ class CustomCell: UITableViewCell, TableViewCellProtocol {
             customImageView.image = image
         }
     }
+    
+    @IBAction func favButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        self.cellViewModel?.onFavButtonTapped(sender.isSelected)
+        
+       // sender.isHidden = true
+    }
+    
     
     /*func fillImage(image : UIImage?) {
         /*CGRect(x: 10, y: 10, width: 100, height: 100)
