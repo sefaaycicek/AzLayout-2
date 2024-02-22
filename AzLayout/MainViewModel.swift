@@ -16,14 +16,14 @@ class BaseViewModel {
 
 class MainViewModel : BaseViewModel {
     private var viewModels = [CellViewModelProtocol]()
+    var onFavButtonTapped : ((Bool)->())!
     
-    override init() {
-        viewModels.append(AyvaViewModel(image: UIImage(named: "manzara2"), onFavButtonTapped: { isSelected in
-            // isselected bilgisini viewController'a nasıl gönderirsiniz?
-        }))
+    
+    func fillInitData() {
+        let ayvaViewModel = AyvaViewModel(image: UIImage(named: "manzara2"), onFavButtonTapped: onFavButtonTapped)
+        viewModels.append(ayvaViewModel)
         
         viewModels.append(PortakalViewModel(name: "Ali", surname: "Veli", age: 20))
-     
     }
     
     func addNewItem(item : CellViewModelProtocol) -> Int {

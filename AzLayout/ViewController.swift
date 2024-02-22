@@ -18,6 +18,12 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.onFavButtonTapped = { isSelected in
+            print(isSelected)
+        }
+        
+        viewModel.fillInitData()
+        
         let customCell = UINib(nibName: "CustomCell", bundle: nil)
         tableView.register(customCell, forCellReuseIdentifier: "ayva")
     }
